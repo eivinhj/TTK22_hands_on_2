@@ -5,6 +5,8 @@
 #include <IMC/Spec/PlanSpecification.hpp>
 #include <IMC/Spec/MsgList.hpp>
 #include <IMC/Spec/Maneuver.hpp>
+#include <IMC/Base/Packet.hpp>
+#include <UDP/DatagramSocket.h>
 
 
 int main(){
@@ -34,7 +36,16 @@ int main(){
 
     //Write text to console
     planSpec.toText(std::cout);
-    
+
+    //Write to socket
+    char localhost[] = "127.0.0.1"; 
+    int port = 6002;
+    int size = planSpec.getSerializationSize();
+    char buffer[size];
+    Packet::serialize(&planSpec, (uint8_t *) buffer, size);
+    DatagramSocket socket(port, localhost, true, true); 
+    socket.sendTo(buffer, size, localhost);
+
     std::cout << "Check JSON in json_out.txt\n\r";
 
     //Save JSON in txt-file
