@@ -199,6 +199,9 @@ imc_cpp_SOURCE_DIR:STATIC=/home/bts/workspace/ho5_imc
 //Dependencies for target
 imc_spec_LIB_DEPENDS:STATIC=
 
+//Dependencies for target
+udp_LIB_DEPENDS:STATIC=
+
 
 ########################
 # INTERNAL cache entries

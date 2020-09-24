@@ -366,6 +366,7 @@ CMakeFiles/main.dir/main.cpp.o
  ..//IMC/Spec/PlanSpecification.hpp
  ..//IMC/Spec/PlanTransition.hpp
  ..//IMC/Spec/PlanVariable.hpp
+ ..//UDP/DatagramSocket.h
  ../IMC/Base/ByteBuffer.hpp
  ../IMC/Base/ByteCopy.hpp
  ../IMC/Base/CRC16.hpp

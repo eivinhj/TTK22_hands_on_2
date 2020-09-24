@@ -4,8 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/bts/workspace/ho5_imc/IMC/Base/Factory.cpp" "/home/bts/workspace/ho5_imc/build/CMakeFiles/main.dir/IMC/Base/Factory.cpp.o"
-  "/home/bts/workspace/ho5_imc/main.cpp" "/home/bts/workspace/ho5_imc/build/CMakeFiles/main.dir/main.cpp.o"
+  "/home/bts/workspace/ho5_imc/UDP/DatagramSocket.cpp" "/home/bts/workspace/ho5_imc/build/CMakeFiles/udp.dir/UDP/DatagramSocket.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,8 +15,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/bts/workspace/ho5_imc/build/CMakeFiles/imc.dir/DependInfo.cmake"
-  "/home/bts/workspace/ho5_imc/build/CMakeFiles/udp.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

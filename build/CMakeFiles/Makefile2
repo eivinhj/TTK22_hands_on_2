@@ -60,6 +60,44 @@ CMAKE_SOURCE_DIR = /home/bts/workspace/ho5_imc
 CMAKE_BINARY_DIR = /home/bts/workspace/ho5_imc/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/main.dir
+
+# All Build rule for target.
+CMakeFiles/main.dir/all: CMakeFiles/imc.dir/all
+CMakeFiles/main.dir/all: CMakeFiles/udp.dir/all
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bts/workspace/ho5_imc/build/CMakeFiles --progress-num=3,4,5 "Built target main"
+.PHONY : CMakeFiles/main.dir/all
+
+# Include target in all.
+all: CMakeFiles/main.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bts/workspace/ho5_imc/build/CMakeFiles 7
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bts/workspace/ho5_imc/build/CMakeFiles 0
+.PHONY : CMakeFiles/main.dir/rule
+
+# Convenience name for target.
+main: CMakeFiles/main.dir/rule
+
+.PHONY : main
+
+# clean rule for target.
+CMakeFiles/main.dir/clean:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
+.PHONY : CMakeFiles/main.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/main.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/imc.dir
 
 # All Build rule for target.
@@ -97,39 +135,39 @@ clean: CMakeFiles/imc.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Target rules for target CMakeFiles/udp.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bts/workspace/ho5_imc/build/CMakeFiles --progress-num=3,4,5 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/udp.dir/all:
+	$(MAKE) -f CMakeFiles/udp.dir/build.make CMakeFiles/udp.dir/depend
+	$(MAKE) -f CMakeFiles/udp.dir/build.make CMakeFiles/udp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bts/workspace/ho5_imc/build/CMakeFiles --progress-num=6,7 "Built target udp"
+.PHONY : CMakeFiles/udp.dir/all
 
 # Include target in all.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/udp.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bts/workspace/ho5_imc/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
+CMakeFiles/udp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bts/workspace/ho5_imc/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/udp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bts/workspace/ho5_imc/build/CMakeFiles 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/udp.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
+udp: CMakeFiles/udp.dir/rule
 
-.PHONY : main
-
-# clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+.PHONY : udp
 
 # clean rule for target.
-clean: CMakeFiles/main.dir/clean
+CMakeFiles/udp.dir/clean:
+	$(MAKE) -f CMakeFiles/udp.dir/build.make CMakeFiles/udp.dir/clean
+.PHONY : CMakeFiles/udp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/udp.dir/clean
 
 .PHONY : clean
 

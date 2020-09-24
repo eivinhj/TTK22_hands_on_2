@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/bts/workspace/ho5_imc/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named main
+
+# Build rule for target.
+main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 main
+.PHONY : main
+
+# fast build rule for target.
+main/fast:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
 # Target rules for targets named imc
 
 # Build rule for target.
@@ -124,17 +137,17 @@ imc/fast:
 .PHONY : imc/fast
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named udp
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 main
-.PHONY : main
+udp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 udp
+.PHONY : udp
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+udp/fast:
+	$(MAKE) -f CMakeFiles/udp.dir/build.make CMakeFiles/udp.dir/build
+.PHONY : udp/fast
 
 IMC/Base/Factory.o: IMC/Base/Factory.cpp.o
 
@@ -142,8 +155,8 @@ IMC/Base/Factory.o: IMC/Base/Factory.cpp.o
 
 # target to build an object file
 IMC/Base/Factory.cpp.o:
-	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.o
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/IMC/Base/Factory.cpp.o
+	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.o
 .PHONY : IMC/Base/Factory.cpp.o
 
 IMC/Base/Factory.i: IMC/Base/Factory.cpp.i
@@ -152,8 +165,8 @@ IMC/Base/Factory.i: IMC/Base/Factory.cpp.i
 
 # target to preprocess a source file
 IMC/Base/Factory.cpp.i:
-	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.i
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/IMC/Base/Factory.cpp.i
+	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.i
 .PHONY : IMC/Base/Factory.cpp.i
 
 IMC/Base/Factory.s: IMC/Base/Factory.cpp.s
@@ -162,9 +175,36 @@ IMC/Base/Factory.s: IMC/Base/Factory.cpp.s
 
 # target to generate assembly for a file
 IMC/Base/Factory.cpp.s:
-	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.s
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/IMC/Base/Factory.cpp.s
+	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.s
 .PHONY : IMC/Base/Factory.cpp.s
+
+UDP/DatagramSocket.o: UDP/DatagramSocket.cpp.o
+
+.PHONY : UDP/DatagramSocket.o
+
+# target to build an object file
+UDP/DatagramSocket.cpp.o:
+	$(MAKE) -f CMakeFiles/udp.dir/build.make CMakeFiles/udp.dir/UDP/DatagramSocket.cpp.o
+.PHONY : UDP/DatagramSocket.cpp.o
+
+UDP/DatagramSocket.i: UDP/DatagramSocket.cpp.i
+
+.PHONY : UDP/DatagramSocket.i
+
+# target to preprocess a source file
+UDP/DatagramSocket.cpp.i:
+	$(MAKE) -f CMakeFiles/udp.dir/build.make CMakeFiles/udp.dir/UDP/DatagramSocket.cpp.i
+.PHONY : UDP/DatagramSocket.cpp.i
+
+UDP/DatagramSocket.s: UDP/DatagramSocket.cpp.s
+
+.PHONY : UDP/DatagramSocket.s
+
+# target to generate assembly for a file
+UDP/DatagramSocket.cpp.s:
+	$(MAKE) -f CMakeFiles/udp.dir/build.make CMakeFiles/udp.dir/UDP/DatagramSocket.cpp.s
+.PHONY : UDP/DatagramSocket.cpp.s
 
 main.o: main.cpp.o
 
@@ -199,13 +239,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... imc"
 	@echo "... edit_cache"
 	@echo "... main"
+	@echo "... rebuild_cache"
+	@echo "... imc"
+	@echo "... udp"
 	@echo "... IMC/Base/Factory.o"
 	@echo "... IMC/Base/Factory.i"
 	@echo "... IMC/Base/Factory.s"
+	@echo "... UDP/DatagramSocket.o"
+	@echo "... UDP/DatagramSocket.i"
+	@echo "... UDP/DatagramSocket.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

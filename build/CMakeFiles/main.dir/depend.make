@@ -365,6 +365,7 @@ CMakeFiles/main.dir/main.cpp.o: ../IMC/Spec/PlanManeuver.hpp
 CMakeFiles/main.dir/main.cpp.o: ../IMC/Spec/PlanSpecification.hpp
 CMakeFiles/main.dir/main.cpp.o: ../IMC/Spec/PlanTransition.hpp
 CMakeFiles/main.dir/main.cpp.o: ../IMC/Spec/PlanVariable.hpp
+CMakeFiles/main.dir/main.cpp.o: ../UDP/DatagramSocket.h
 CMakeFiles/main.dir/main.cpp.o: ../IMC/Base/ByteBuffer.hpp
 CMakeFiles/main.dir/main.cpp.o: ../IMC/Base/ByteCopy.hpp
 CMakeFiles/main.dir/main.cpp.o: ../IMC/Base/CRC16.hpp

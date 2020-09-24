@@ -8568,6 +8568,24 @@ IMC/Spec/Bitfields.hpp
 IMC/Spec/Maneuver.hpp
 -
 
+..//UDP/DatagramSocket.h
+winsock2.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+netdb.h
+-
+string.h
+-
+
 ../IMC/Base/ByteBuffer.hpp
 cstdlib
 -
@@ -8836,5 +8854,9 @@ IMC/Spec/PlanSpecification.hpp
 IMC/Spec/MsgList.hpp
 -
 IMC/Spec/Maneuver.hpp
+-
+IMC/Base/Packet.hpp
+-
+UDP/DatagramSocket.h
 -
 
