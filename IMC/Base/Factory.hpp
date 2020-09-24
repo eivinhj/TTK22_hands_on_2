@@ -34,17 +34,17 @@ namespace IMC
   class Factory
   {
   public:
-    //! Produce a message object by identification number.
-    //! @param key message identification number.
-    //! @return message object allocated on the heap.
-    static Message*
-    produce(uint32_t key);
-
     //! Produce a message object by name.
     //! @param name message name.
     //! @return message object allocated on the heap.
     static Message*
     produce(const std::string& name);
+
+    //! Produce a message object by identification number.
+    //! @param key message identification number.
+    //! @return message object allocated on the heap.
+    static Message*
+    produce(uint32_t id);
 
     //! Retrieve all message abbreviations.
     //! @param v output vector

@@ -14,6 +14,16 @@ stdint.h
 windows.h
 -
 
+..//IMC/Base/Factory.hpp
+string
+-
+vector
+-
+Config.hpp
+../IMC/Base/Config.hpp
+Message.hpp
+../IMC/Base/Message.hpp
+
 ..//IMC/Base/InlineMessage.hpp
 cstddef
 -
@@ -4888,6 +4898,8 @@ IMC/Base/MessageList.hpp
 IMC/Base/JSON.hpp
 -
 IMC/Base/Serialization.hpp
+-
+IMC/Base/Factory.hpp
 -
 IMC/Spec/Enumerations.hpp
 -

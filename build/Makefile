@@ -143,6 +143,7 @@ IMC/Base/Factory.o: IMC/Base/Factory.cpp.o
 # target to build an object file
 IMC/Base/Factory.cpp.o:
 	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/IMC/Base/Factory.cpp.o
 .PHONY : IMC/Base/Factory.cpp.o
 
 IMC/Base/Factory.i: IMC/Base/Factory.cpp.i
@@ -152,6 +153,7 @@ IMC/Base/Factory.i: IMC/Base/Factory.cpp.i
 # target to preprocess a source file
 IMC/Base/Factory.cpp.i:
 	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/IMC/Base/Factory.cpp.i
 .PHONY : IMC/Base/Factory.cpp.i
 
 IMC/Base/Factory.s: IMC/Base/Factory.cpp.s
@@ -161,6 +163,7 @@ IMC/Base/Factory.s: IMC/Base/Factory.cpp.s
 # target to generate assembly for a file
 IMC/Base/Factory.cpp.s:
 	$(MAKE) -f CMakeFiles/imc.dir/build.make CMakeFiles/imc.dir/IMC/Base/Factory.cpp.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/IMC/Base/Factory.cpp.s
 .PHONY : IMC/Base/Factory.cpp.s
 
 main.o: main.cpp.o

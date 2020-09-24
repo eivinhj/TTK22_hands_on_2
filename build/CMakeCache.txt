@@ -130,7 +130,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=ho5_imc
+CMAKE_PROJECT_NAME:STATIC=imc_cpp
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -189,6 +189,15 @@ ho5_imc_SOURCE_DIR:STATIC=/home/bts/workspace/ho5_imc
 
 //Dependencies for target
 imc_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+imc_cpp_BINARY_DIR:STATIC=/home/bts/workspace/ho5_imc/build
+
+//Value Computed by CMake
+imc_cpp_SOURCE_DIR:STATIC=/home/bts/workspace/ho5_imc
+
+//Dependencies for target
+imc_spec_LIB_DEPENDS:STATIC=
 
 
 ########################

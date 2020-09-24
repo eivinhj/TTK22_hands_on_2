@@ -3,6 +3,7 @@
 
 CMakeFiles/imc.dir/IMC/Base/Factory.cpp.o
  ..//IMC/Base/Config.hpp
+ ..//IMC/Base/Factory.hpp
  ..//IMC/Base/InlineMessage.hpp
  ..//IMC/Base/JSON.hpp
  ..//IMC/Base/Message.hpp

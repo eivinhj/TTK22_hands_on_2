@@ -35,6 +35,7 @@
 #include <IMC/Base/MessageList.hpp>
 #include <IMC/Base/JSON.hpp>
 #include <IMC/Base/Serialization.hpp>
+#include <IMC/Base/Factory.hpp>
 #include <IMC/Spec/Enumerations.hpp>
 #include <IMC/Spec/Bitfields.hpp>
 

@@ -1,0 +1,23 @@
+{
+  "abbrev": "PlanSpecification",
+  "timestamp": "1562830429.47",
+  "src": "16652",
+  "src_ent": "44",
+  "dst": "30",
+  "dst_ent": "255",
+  "plan_id": "cmd-lauv-xplore-1",
+  "description": "",
+  "vnamespace": "",
+  "variables": [],
+  "start_man_id": "1",
+  "maneuvers": [{
+    "abbrev": "PlanManeuver",
+    "maneuver_id": "1",
+    "data": "null",
+    "start_actions": [],
+    "end_actions": []
+  }],
+  "transitions": [],
+  "start_actions": [],
+  "end_actions": []
+}
